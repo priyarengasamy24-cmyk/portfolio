@@ -1,7 +1,10 @@
 const skills = [
   { category: 'Frontend', items: ['HTML & CSS (Basic)', 'JavaScript (Basic)', 'React.js (Learning)'] },
   { category: 'UI/UX Design', items: ['Figma', 'Canva', 'Wireframing'] },
-  { category: 'Other', items: ['Python', 'SQL (Basic)', 'Node.js & Express (Basic)', 'Git & GitHub'] },
+  { category: 'Programming', items: ['Python', 'OOPS', 'SQL (Basic)', 'Node.js & Express (Basic)'] },
+  { category: 'AI Tools', items: ['Figma Make', 'Base44', 'Prompt Writing'] },
+  { category: 'Soft Skills', items: ['Time Management', 'Teamwork'] },
+  { category: 'Tools', items: ['Git & GitHub', 'VS Code'] },
 ]
 
 function Skills() {
