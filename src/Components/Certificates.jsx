@@ -1,10 +1,12 @@
+import { useState, useEffect } from 'react'
+
 const certificates = [
-  { title: 'UI/UX Design', issuer: 'Tamil Nadu Skill Development Corporation' },
-  { title: 'Full Stack Development MasterClass', issuer: 'NoviTech R&D Private Limited', year: '2025' },
-  { title: 'Backend App Development using Node.js and Express', issuer: 'IBM SkillsBuild' },
-  { title: 'Big Data Computing', issuer: 'NPTEL' },
-  { title: 'Cloud Computing', issuer: 'NPTEL' },
-  { title: 'Digital Marketing', issuer: 'EDII-TN' },
+  { title: 'UI/UX Design', issuer: 'Tamil Nadu Skill Development Corporation', file: '/certificates/ui-ux.jpg' },
+  { title: 'Full Stack Development MasterClass', issuer: 'NoviTech R&D Private Limited', year: '2025', file: '/certificates/full-stack.jpg' },
+  { title: 'Backend App Development using Node.js and Express', issuer: 'IBM SkillsBuild', file: '/certificates/nodejs-ibm.jpg' },
+  { title: 'Big Data Computing', issuer: 'NPTEL', file: '/certificates/nptel-bigdata.jpg' },
+  { title: 'Cloud Computing', issuer: 'NPTEL', file: '/certificates/nptel-cloud.jpg' },
+  { title: 'Digital Marketing', issuer: 'EDII-TN', file: '/certificates/digital-marketing.jpg' },
 ]
 
 const achievements = [
@@ -15,6 +17,16 @@ const achievements = [
 ]
 
 function Certificates() {
+  const [selected, setSelected] = useState(null)
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'Escape') setSelected(null)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [])
+
   return (
     <section id="certificates" className="section">
       <h2 className="section-title">Certificates</h2>
@@ -26,18 +38,35 @@ function Certificates() {
             {c.year && <p className="project-type">{c.year}</p>}
             {c.file && (
               <div className="project-actions">
-                <a className="project-link" href={c.file} target="_blank" rel="noreferrer">View Certificate</a>
+                <button className="project-link" onClick={() => setSelected(c)}>
+                  View Certificate
+                </button>
               </div>
             )}
           </div>
         ))}
       </div>
+
       <h3 className="sub-title">Achievements</h3>
       <ul className="cert-list">
         {achievements.map((a) => (
           <li key={a}>{a}</li>
         ))}
       </ul>
+
+      {selected && (
+        <div className="modal" onClick={() => setSelected(null)}>
+          <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setSelected(null)}>✕</button>
+            <h3 className="modal-title">{selected.title}</h3>
+            {selected.file.endsWith('.pdf') ? (
+              <iframe className="modal-pdf" src={selected.file} title={selected.title}></iframe>
+            ) : (
+              <img className="modal-img" src={selected.file} alt={selected.title} />
+            )}
+          </div>
+        </div>
+      )}
     </section>
   )
 }
