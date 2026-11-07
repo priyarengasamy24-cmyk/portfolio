@@ -11,11 +11,21 @@ const experience = [
   },
   {
     role: 'IBM Cognos Analytics Virtual Intern',
-    company: 'Adroit Technology',
-    period: 'Virtual Internship',
+    company: 'AdroIT Technologies Innovative Solutions Pvt. Ltd.',
+    period: '9 March 2026 - 10 April 2026',
     links: [
       { label: 'Cognos Project', url: 'https://github.com/priyarengasamy24-cmyk/IBM-PROJECT-COGNOS-' },
       { label: 'NM IBM Project', url: 'https://github.com/priyarengasamy24-cmyk/NM-IBM-PROJECT-' },
+      { label: 'Certificate', url: '/certificates/adroit-internship.png' },
+    ],
+  },
+  {
+    role: 'Web Development Intern',
+    company: 'MaanavaN Learning Center LLP',
+    period: '14 July 2025 - 29 July 2025',
+    project: 'A Study on Scalable Web Development using Django and Modern Frontend Frameworks',
+    links: [
+      { label: 'Internship Letter', url: '/certificates/maanavan-internship.png' },
     ],
   },
 ]
