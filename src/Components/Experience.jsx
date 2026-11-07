@@ -16,7 +16,6 @@ const experience = [
     links: [
       { label: 'Cognos Project', url: 'https://github.com/priyarengasamy24-cmyk/IBM-PROJECT-COGNOS-' },
       { label: 'NM IBM Project', url: 'https://github.com/priyarengasamy24-cmyk/NM-IBM-PROJECT-' },
-      { label: 'Certificate', url: '/certificates/adroit-internship.png' },
     ],
   },
   {
@@ -24,9 +23,7 @@ const experience = [
     company: 'MaanavaN Learning Center LLP',
     period: '14 July 2025 - 29 July 2025',
     project: 'A Study on Scalable Web Development using Django and Modern Frontend Frameworks',
-    links: [
-      { label: 'Internship Letter', url: '/certificates/maanavan-internship.png' },
-    ],
+    links: [],
   },
 ]
 
@@ -45,13 +42,15 @@ function Experience() {
               {e.project && (
                 <p className="muted"><strong>Project:</strong> {e.project}</p>
               )}
-              <div className="project-actions">
-                {e.links.map((l) => (
-                  <a key={l.label} className="project-link" href={l.url} target="_blank" rel="noreferrer">
-                    {l.label}
-                  </a>
-                ))}
-              </div>
+              {e.links.length > 0 && (
+                <div className="project-actions">
+                  {e.links.map((l) => (
+                    <a key={l.label} className="project-link" href={l.url} target="_blank" rel="noreferrer">
+                      {l.label}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         ))}
