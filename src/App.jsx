@@ -5,21 +5,29 @@ import Skills from './Components/Skills'
 import Education from './Components/Education'
 import Projects from './Components/Projects'
 import Experience from './Components/Experience'
+import Certificates from './Components/Certificates'
 import Resume from './Components/Resume'
 import Contact from './Components/Contact'
+import Reveal from './Components/Reveal'
 
 function App() {
   return (
     <>
+      <div className="bg-blobs">
+        <span className="blob b1"></span>
+        <span className="blob b2"></span>
+        <span className="blob b3"></span>
+      </div>
       <Navbar />
       <Home />
-      <About />
-      <Skills />
-      <Education />
-      <Projects />
-      <Experience />
-      <Resume />
-      <Contact />
+      <Reveal><About /></Reveal>
+      <Reveal><Skills /></Reveal>
+      <Reveal><Education /></Reveal>
+      <Reveal><Projects /></Reveal>
+      <Reveal><Experience /></Reveal>
+      <Certificates />
+      <Reveal><Resume /></Reveal>
+      <Reveal><Contact /></Reveal>
     </>
   )
 }
