@@ -32,7 +32,7 @@ const projects = [
     description: 'A deep learning approach to improve medium resolution satellite images.',
     tech: ['Python', 'Deep Learning'],
     role: 'Documentation and presentation',
-    github: 'https://github.com/priyarengasamy24-cmyk/Deep-Learning-Based-Super-Resolution-Mapping-SRM',
+        github: 'https://github.com/priyarengasamy24-cmyk/Deep-Learning-Based-Super-Resolution-Mapping-SRM-',
     live: 'https://graceful-geo-vision-flow.base44.app/',
   },
 ]
