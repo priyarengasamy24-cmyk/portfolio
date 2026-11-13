@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react'
 
 const certificates = [
   { title: 'UI/UX Design', issuer: 'Tamil Nadu Skill Development Corporation', file: '/certificates/ui-ux.jpg' },
-  { title: 'Full Stack Development MasterClass', issuer: 'NoviTech R&D Private Limited', year: '2025' },
-  { title: 'Backend App Development using Node.js and Express', issuer: 'IBM SkillsBuild' },
+  { title: 'Full Stack Development MasterClass', issuer: 'NoviTech R&D Private Limited', year: '2025', file: '/certificates/full-stack.jpg' },
+  { title: 'Backend App Development using Node.js and Express', issuer: 'IBM SkillsBuild', file: '/certificates/nodejs-ibm.png' },
   { title: 'Introduction to Cognos Analytics', issuer: 'IBM Career Education Program', year: 'March 2026', file: '/certificates/ibm-cognos-course.png' },
   { title: 'Virtual Internship: IBM Cognos Analytics', issuer: 'AdroIT Technologies', year: 'March - April 2026', file: '/certificates/adroit-internship.png' },
   { title: 'Internship: Scalable Web Development using Django and Modern Frontend Frameworks', issuer: 'MaanavaN Learning Center LLP', year: 'July 2025' },
-  { title: 'Big Data Computing', issuer: 'NPTEL', file: '/certificates/nptel-bigdata.jpg' },
+  { title: 'Big Data Computing', issuer: 'NPTEL', file: '/certificates/nptel-bigdata.png' },
   { title: 'Cloud Computing', issuer: 'NPTEL', file: '/certificates/nptel-cloud.jpg' },
   { title: 'Digital Marketing', issuer: 'EDII-TN', file: '/certificates/digital-marketing.jpg' },
 ]
